@@ -1,0 +1,10 @@
+footer {
+    display: flex;
+    color: white;
+    background-color: #1c1c1c;
+    padding: 0.5rem;
+}
+
+ul{
+    list-style-type: none;
+}
