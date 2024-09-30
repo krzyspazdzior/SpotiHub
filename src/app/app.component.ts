@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HomeComponent } from './home/home.component';
 import { single } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, HomeComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -27,7 +28,6 @@ interface Song{
   releaseType: releaseType,
   album: number | null;
 }
-
 class SongInfo{
   id: number;
   title: string;
@@ -165,13 +165,7 @@ function deleteFromPlaylist(playlistName: string, songTitle: string): void{
 // listSongs();
 
 
-// createSong("On Sight","Kanye West","album",);
-// createSong("La Manga","Alberto","single");
-// createPlaylist("hiphop suko");
-// addToPlaylist("hiphop suko", "La Manga");
-// addToPlaylist("hiphop suko", "On Sight");
-// deleteFromPlaylist("hiphop suko", "On Sight");
-// console.log(userPlaylists);
+
 
 
 const newAlbum1 = createAlbum("Yeezus");
