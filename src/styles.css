@@ -1,1 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --main-orange: #fca400;
+    --main-grey: #1f1f1f;
+}
+
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--main-grey);
+}
