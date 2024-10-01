@@ -1,0 +1,19 @@
+.banner-container{
+    display: flex;
+    width: fit-content;
+    position: relative;
+    color: white;
+}
+.banner-container img{
+    z-index: 10;
+    height: 300px;
+    width: 600px;
+    border-radius: 10px;
+}
+.banner-container h1{
+    z-index: 20;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
