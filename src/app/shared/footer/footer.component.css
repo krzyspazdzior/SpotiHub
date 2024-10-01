@@ -1,10 +1,20 @@
 footer {
     display: flex;
     color: white;
-    background-color: #1c1c1c;
+    background-color: var(--main-grey);
     padding: 0.5rem;
+    justify-content: center;
 }
 
 ul{
+    display: flex;
     list-style-type: none;
+    flex-direction: column;
+}
+
+a {
+    display: block;
+    padding: 5px;
+    text-decoration: none;
+    color: white;   
 }
