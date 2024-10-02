@@ -1,7 +1,7 @@
 footer {
     display: flex;
     color: white;
-    background-color: var(--main-grey);
+    background-color: var(--secondary-grey);
     padding: 0.5rem;
     justify-content: center;
 }

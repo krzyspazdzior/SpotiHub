@@ -9,11 +9,31 @@
     height: 300px;
     width: 600px;
     border-radius: 10px;
+    filter: brightness(0.65);
 }
-.banner-container h1{
+.banner-container .banner-text-box{
     z-index: 20;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+.banner-text-box p{
+    filter: opacity(0.6);
+}
+.banner-container{
+    cursor: pointer;
+}
+.banner-container:hover p{
+    filter: opacity(1);
+    text-shadow: 1px 1px 3px white;
+    transition: 0.2s all;
+}
+.banner-container:hover img{
+    filter: brightness(0.7);
+    transition: 0.5s all;
 }
