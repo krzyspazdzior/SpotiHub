@@ -1,3 +1,9 @@
+:host{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .banner-container{
     display: flex;
     width: fit-content;
