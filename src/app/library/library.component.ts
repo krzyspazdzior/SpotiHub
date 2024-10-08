@@ -5,12 +5,12 @@ import { AsideComponent } from '../shared/aside/aside.component';
 
 
 @Component({
-  selector: 'app-home',
+  selector: 'app-library',
   standalone: true,
-  templateUrl: './index.html',
   imports: [HeaderComponent, BannerComponent, AsideComponent],
-  styleUrl: './home.component.css'
+  templateUrl: './library.component.html',
+  styleUrl: './library.component.css'
 })
-export class HomeComponent {
+export class LibraryComponent {
 
 }
