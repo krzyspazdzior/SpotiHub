@@ -1,0 +1,15 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--secondary-grey);
+    padding-top: 30px;
+    margin-left: 220px;
+
+}
+.main-container{
+    display: flex;
+    position: relative;
+    margin: 0;
+    background-color: var(--secondary-grey);
+}

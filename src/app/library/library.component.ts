@@ -9,7 +9,7 @@ import { AsideComponent } from '../shared/aside/aside.component';
   standalone: true,
   imports: [HeaderComponent, BannerComponent, AsideComponent],
   templateUrl: './library.component.html',
-  styleUrl: './library.component.css'
+  styleUrls: ['./library.component.css', '../main-container.css']
 })
 export class LibraryComponent {
 

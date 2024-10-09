@@ -6,21 +6,7 @@
 :host{
     width: 100%;
 }
-main{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: var(--secondary-grey);
-    padding-top: 30px;
-    margin-left: 200px;
 
-}
-.home-container{
-    display: flex;
-    position: relative;
-    margin: 0;
-    background-color: var(--secondary-grey);
-}
 .trending-container{
     display: flex;
     flex-direction: column;
