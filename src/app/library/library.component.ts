@@ -12,5 +12,21 @@ import { AsideComponent } from '../shared/aside/aside.component';
   styleUrls: ['./library.component.css', '../main-container.css']
 })
 export class LibraryComponent {
-
+  isShow = false;
+ 
+  toggleDisplay(): void{
+    console.log("dziala");
+    this.isShow = !this.isShow;
+  }
 }
+// const form = document.querySelector('.form-container') as HTMLElement;
+// let formCheck = false;
+// function toggleForm(){
+//   if(formCheck == false){
+//     form.style.display = "flex";
+//     formCheck = true
+//   }else{
+//     form.style.display = "none";
+//     formCheck = false;
+//   }
+// }   

@@ -1,13 +1,7 @@
-/* .library-area{
-    display: flex;
-    gap: 12px;
-    flex-direction: column;   
-    width: 100%;
-    align-items: center;
-    padding: 2rem 0;
-}  */
+body{
+    position: relative;
+}
 .library-area{
-    padding: 2rem 0;
     width: 100%;
     display: grid;
     grid-template-columns: 50px auto 100px;
@@ -16,12 +10,17 @@
 .library-item{
     display: flex;
     gap: 20px;
-    border-radius: 2px;
-    background-color: #ffffff11;
+    border-radius: 5px;
+    background-color: #ffffff00;
     padding: 1rem 1rem;
+
 }
 .library-item:hover{
     cursor: pointer;
+    transition: 0.3s all;
+    background-color: #ffffff27;
+    border-color: white;
+
 }
 .library-item img{
     height: 85px;
@@ -33,10 +32,10 @@
     align-items: start;
 }
 .item-info h3{
-    font-size: 16px;
+    font-size: 18px;
 }
 .item-info p{
-    font-size: 13px;
+    font-size: 14px;
     color: #ffffff57;
 }
 .item-number, .item-options{
@@ -52,4 +51,125 @@
 }
 .item-options:hover{
     cursor: pointer;
+}
+.library-bar{
+    display: flex;
+    gap: 15px;
+    padding: 2rem 1rem 1.5rem 2rem;
+    align-items: center;
+}
+.bar-item{
+    padding: 0.8rem 1.2rem;
+    background-color: #fff;
+    border-radius: 100px;
+    color: black;
+    font-weight: bold;
+    border: none;
+}
+.bar-item:hover, .form-container button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: var(--main-orange);
+    transition: 0.3s all;
+}
+.vl{
+    height:50%;
+    border-left: solid 1.5px rgba(255, 255, 255, 0.417);
+    border-radius: 20px;
+}
+
+.form-container{
+    z-index: 150;
+    position: fixed;
+    background-color: rgb(16, 16, 16);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3rem 2.5rem;
+    box-shadow: 0px 0px 10px 2px black;
+}
+form{
+    display: flex;
+    gap: 2em;
+    flex-direction: column;
+}
+.input-area{
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+.input-area input[type=text]{
+    height: 35px;
+    width: 280px;
+    padding: 0.1rem 1rem;
+    border-radius: 0;
+    color: black;
+    border: none;
+}
+input::file-selector-button {
+    font-weight: bold;
+    color: rgb(56, 56, 56);
+    background-color: var(--font-color);
+    padding: 0.8em;
+    border-radius: 5px;
+    border: none;
+  }
+input::file-selector-button:hover{
+    background-color: var(--main-orange);
+    color: var(--font-color);
+    transition: 0.2s all;
+}
+.input-area input:focus{
+    outline: var(--main-orange) solid 2px;
+}
+.input-area label{
+    font-size: 16px;
+}
+.form-container button{
+    height: 45px;
+    width: 100px;
+    color: black;
+    border-radius: 100px;
+    border: none;
+    background-color: #fff;
+    font-weight: bold;
+    font-size: 13px;
+}
+.blur{
+    z-index: 140;
+    background-color: black;
+    filter: opacity(0.6);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100vw;
+}
+.form-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 45px;
+}
+.form-header h3{
+    font-size: 25px;
+    font-weight: bold;
+}
+.form-header i{
+    font-size: 20px;
+    
+}
+.form-header div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 32px;
+    width: 32px;
+    border-radius: 100px;
+}
+.form-header div:hover{
+    cursor: pointer;
+    background-color: #ffffff25;
+    transition: 0.15s all;
 }

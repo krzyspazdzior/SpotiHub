@@ -2,6 +2,12 @@
 <div class="main-container">
     <app-aside></app-aside>
     <main>
+        <div class="library-bar">
+            <button class="bar-item" (click)="toggleDisplay()">Create Playlist</button>
+            <div class="vl"></div>
+            <button class="bar-item">Playlists</button>
+            <button class="bar-item">Albums</button>
+        </div>
         <div class="library-area">
             <div class="item-number">1.</div>
             <div class="library-item">
@@ -41,4 +47,22 @@
             <div class="item-options">•••</div>
         </div>
     </main>
+    <div class="blur" [hidden]="!isShow"></div>
+    <div [hidden]="!isShow" class="form-container">
+        <div class="form-header">
+            <h3>Create playlist</h3>
+            <div (click)="toggleDisplay()"><i class="bi bi-x-lg"></i></div>
+        </div>
+        <form action="" onsubmit="createPlaylist()">
+            <div class="input-area">
+                <label for="image">Image</label>
+                <input type="file">
+            </div>
+            <div class="input-area">
+                <label for="Name">Name</label>
+                <input type="text">
+            </div>
+            <button type="submit">Create</button>
+        </form>
+    </div>
 </div>

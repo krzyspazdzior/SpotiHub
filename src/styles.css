@@ -1,5 +1,5 @@
 :root{
-    --main-orange: #fca400;
+    --main-orange: #d15d1e;
     --main-grey: #131313;
     --secondary-grey: #181818;
     --font-color: #fff9f4;
@@ -13,6 +13,7 @@
 }
 
 body{
+    background-color: var(--main-grey);
     margin: 0px;
     padding: 0px;
 }
@@ -30,5 +31,6 @@ body{
     background-color: #1c1c1c;
     border: 3px solid white;
     color: #fff;
+    cursor: pointer;
     transition: 0.3s all;
 }
