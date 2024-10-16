@@ -2,8 +2,7 @@ import { Component } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
 import { BannerComponent } from "../shared/banner/banner.component";
 import { AsideComponent } from '../shared/aside/aside.component';
-import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
-import { empty } from 'rxjs';
+import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 
 
@@ -74,8 +73,9 @@ export class LibraryComponent {
 
   playlistForm = new FormGroup({
     imageFile: new FormControl(null),
-    playlistName: new FormControl('New Playlist')
+    playlistName: new FormControl('New Playlist', Validators.required)
   })
+
 
 
   //creating playlist
@@ -92,9 +92,10 @@ export class LibraryComponent {
     };
     
 
-    let playlistName = this.playlistForm.value.playlistName ?? ''
-    
-    
+    let playlistName = this.playlistForm.value.playlistName ?? '';
+    let imageFile = this.playlistForm.value.imageFile ?? null;
+
+
     const newPlaylistId = userPlaylists.length > 0 
     ? Math.max(...userPlaylists.map(p => p.id)) + 1 : 1
     userPlaylists.push(new PlaylistInfo(newPlaylistId, playlistName, []));
@@ -105,13 +106,23 @@ export class LibraryComponent {
     playlistNumber.classList.add('item-number');
     const playlistOptions = document.createElement('div');
     playlistOptions.classList.add('item-options');
+
+    //image default
+    let imageUrl = '/empty_playlist.png'; 
+    if (imageFile) {
+      imageUrl = URL.createObjectURL(imageFile);
+    }
+
   // Set inner HTML for the new playlist
+
+
+
 
     playlistNumber.innerHTML = `${newPlaylistId}.`;
     playlistOptions.innerHTML = `•••`
 
   playlistContainer.innerHTML = `
-    <img src="/empty_playlist.png" alt="">
+    <img src="${imageUrl}" alt="">
     <div class="item-info">
       <h3>${playlistName}</h3>
       <p>Playlist • User</p>
@@ -128,13 +139,15 @@ export class LibraryComponent {
     const messageElement = document.getElementById("message");
     this.message = `${playlistName} has been created in your library!`;
     if (messageElement) {
+      messageElement.style.display = "flex"
       messageElement.style.transition = "none";
       messageElement.style.opacity = "1";
       messageElement.innerText = this.message;
       void messageElement.offsetWidth; 
-      messageElement.style.transition = "3.5s opacity";
+      messageElement.style.transition = "2.5s opacity";
       setTimeout(() => {messageElement.style.opacity = "0";}, 1000)
       setTimeout(() =>{messageElement.innerText = ""}, 4000)
+      setTimeout(() =>{messageElement.style.display = "none"}, 4000)
     }
     this.playlistForm.reset();
   }

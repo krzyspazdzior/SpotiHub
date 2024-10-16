@@ -174,6 +174,3 @@ const newAlbum2 = createAlbum("Graduation");
 createSong("On Sight", "Kanye West", "album", newAlbum1);
 createSong("Dzwonią Dziwki", "Waima", "single", null);
 console.log(allAlbums);
-
-// Music player
-console.log("=================Music player==================");

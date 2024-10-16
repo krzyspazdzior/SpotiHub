@@ -35,6 +35,25 @@ body{
     transition: 0.3s all;
 }
 
+/* home */
+
+.trending-album{
+    display: flex;
+    flex-direction: column;
+    color: #dadada;
+    width: 150px;
+    padding: 0.8rem;
+    gap: 0.22rem;
+}
+.trending-album h3{
+    font-size: 16px;
+}
+.trending-album p{
+    font-size: 12px;
+    color: #dadadaca;
+}
+
+
 /* library */
 
 .library-item{
