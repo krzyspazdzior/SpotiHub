@@ -7,7 +7,7 @@ aside{
     height: 100vh;
     padding: 15px 10px;
     width: 200px;
-    background-color: var(--main-grey);
+    background-color: var(--black);
     z-index: 100;
 }
 a{
@@ -68,7 +68,7 @@ a:hover i, a:hover{
 }
 .nav-btn{
     background-color: var(--font-color);
-    color: var(--main-grey);
+    color: var(--black);
     font-weight: bold;
     border: none;
     border-radius: 200px;

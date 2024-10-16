@@ -56,7 +56,6 @@ const albumsJson = `[
 ]`;
 const albumList = JSON.parse(albumsJson);
 
-
 @Component({
   selector: 'app-home',
   standalone: true,

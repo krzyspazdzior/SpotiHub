@@ -1,8 +1,9 @@
 :root{
+
     --main-orange: #d15d1e;
     --main-grey: #131313;
-    --secondary-grey: #181818;
     --font-color: #fff9f4;
+    --black: #0d0d0d;
 }
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 *{
@@ -13,7 +14,7 @@
 }
 
 body{
-    background-color: var(--secondary-grey);
+    background-color: var(--main-grey);
     margin: 0px;
     padding: 0px;
 }

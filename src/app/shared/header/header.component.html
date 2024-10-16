@@ -9,8 +9,17 @@
         </div>
     </div>
     <div class="vl"></div>
-    <div class="user-box">
+    <div class="user-box" (click)="toggleMenuDisplay()">
         <img src="/guest_img.jpeg" alt="guest profile">
         <i class="bi bi-caret-down-fill"></i>
+        <div class="drop-menu" [hidden]="!isShowMenu">
+            <div class="triangle-up"></div>
+            <ul>
+                <li>Profile</li>
+                <li>Settings</li>
+                <li>Version</li>
+                <li>Log out</li>
+            </ul>
+        </div>
     </div>
 </header>
