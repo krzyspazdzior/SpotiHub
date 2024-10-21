@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../shared/header/header.component';
-import { BannerComponent } from "../shared/banner/banner.component";
 import { AsideComponent } from '../shared/aside/aside.component';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
@@ -54,7 +53,7 @@ class SongInfo{
 @Component({
   selector: 'app-library',
   standalone: true,
-  imports: [HeaderComponent, BannerComponent, AsideComponent, ReactiveFormsModule],
+  imports: [HeaderComponent, AsideComponent, ReactiveFormsModule],
   templateUrl: './library.component.html',
   styleUrls: ['./library.component.css', '../main-container.css']
 })

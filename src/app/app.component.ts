@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { single } from 'rxjs';
+import { LoginComponent } from './login/login.component';
 import { HeaderComponent } from "./shared/header/header.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent, RouterLink, HeaderComponent],
+  imports: [RouterOutlet, HomeComponent, RouterLink, HeaderComponent, LoginComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

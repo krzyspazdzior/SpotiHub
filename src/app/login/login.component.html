@@ -1,0 +1,19 @@
+<app-header></app-header>
+<div class="main-container">
+    <app-aside></app-aside>
+    <main>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
+            <div>
+              <label for="username">Username</label>
+              <input id="username" type="text" formControlName="username" placeholder="Enter your username">
+            </div>
+          
+            <div>
+              <label for="password">Password</label>
+              <input id="password" type="password" formControlName="password" placeholder="Enter your password">
+
+            </div>
+            <button type="submit" [disabled]="loginForm.invalid">Login</button>
+          </form>
+    </main>
+</div>

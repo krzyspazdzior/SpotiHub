@@ -48,10 +48,10 @@ a:hover i, a:hover{
     color: var(--font-color);
     font-weight: bold;
 }
-.active i{
+.active i:not(.iNot){
     color: #d15d1e;
 }
-.active:hover i{
+.active:hover i:not(.iNot){
     color: #d15d1e;
 }
 .profile-items{
@@ -83,4 +83,15 @@ a:hover i, a:hover{
 
 nav .bi-caret-down-fill{
     font-size: 12px;
+}
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button a{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

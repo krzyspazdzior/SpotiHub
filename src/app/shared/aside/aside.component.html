@@ -11,15 +11,22 @@
                     <i class="bi bi-collection-fill"></i> Library
                 </a>
             </li>
-            <li><i class="bi bi-heart-fill"></i> Liked Songs</li>
-            <li><i class="bi bi-person-circle"></i> Profile<i class="bi bi-caret-down-fill"></i>
+            <li>
+                <a>
+                    <i class="bi bi-heart-fill"></i> Liked Songs
+                </a>    
+            </li>
+            <li>
+                <a routerLink="/login" routerLinkActive="active">
+                    <i class="bi bi-person-fill"></i> Profile <i class="bi bi-caret-down-fill iNot"></i>
+                </a>
             </li>
         </ul>
     </nav>
     <div class="profile-items">
         <p>No account yet.</p>
-        <button class="nav-btn">
-            Create Account
+        <button class="nav-btn" routerLink="/login">
+                Create Account
         </button>
     </div>
 </aside>

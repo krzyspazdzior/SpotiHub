@@ -1,6 +1,6 @@
 <header>
     <div class="img-box">
-        <img src="/logo_full.png" alt="Brand Logo">
+        <img src="/logo_full.png" alt="Brand Logo" routerLink="/home">
     </div>
     <div class="header-nav">
         <div class="search-area">
@@ -15,10 +15,31 @@
         <div class="drop-menu" [hidden]="!isShowMenu">
             <div class="triangle-up"></div>
             <ul>
-                <li>Profile</li>
-                <li>Settings</li>
-                <li>Version</li>
-                <li>Log out</li>
+                <li>
+                    <a href="" class="disabled">
+                        Profile
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Settings
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Version
+                    </a>
+                </li>
+                <li>
+                    <a href="" class="disabled">
+                        Log out
+                    </a>
+                </li>
+                <li>
+                    <a routerLink="/login">
+                        Register
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

@@ -7,7 +7,7 @@ import { RouterLink, RouterOutlet, RouterLinkActive } from '@angular/router';
   standalone: true,
   imports: [RouterLink, RouterOutlet, RouterLinkActive],
   templateUrl: './aside.component.html',
-  styleUrl: './aside.component.css'
+  styleUrls: ['./aside.component.css']
 })
 export class AsideComponent {
   

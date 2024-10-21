@@ -60,7 +60,7 @@ const albumList = JSON.parse(albumsJson);
   selector: 'app-home',
   standalone: true,
   templateUrl: './index.html',
-  imports: [HeaderComponent, BannerComponent, AsideComponent, RouterLink,RouterOutlet],
+  imports: [HeaderComponent, BannerComponent, AsideComponent],
   styleUrls: ['./home.component.css', '../main-container.css']
 })
 export class HomeComponent implements AfterViewInit {
